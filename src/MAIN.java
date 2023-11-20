@@ -43,5 +43,26 @@ public class MAIN
         boolean employe = societe.rechercherEmploye(em);
         System.out.println(employe);
 
+        System.out.println("\n**********************************PROSIT10*********************************\n");
+        DepartementHashset D = new DepartementHashset();
+        Departement d =new Departement(1,15,"test");
+        Departement d1 =new Departement(2,15,"test2");
+        Departement d2 =new Departement(3,15,"test3");
+
+        D.ajouterDepartement(d);
+        D.ajouterDepartement(d1);
+        D.ajouterDepartement(d2);
+
+        //display
+        D.displayDepartement();
+        //delete
+        D.supprimerDepartement(d2);
+        D.displayDepartement();
+        //search using name
+         System.out.println(D.rechercherDepartement("test"));
+        System.out.println(D.rechercherDepartement("test3"));
+        //search by object
+        System.out.println(D.rechercherDepartement(d));
+
     }
 }
